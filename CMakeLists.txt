@@ -10,6 +10,8 @@ project(Example)
 
 set(CMAKE_CXX_STANDARD 20)
 find_package(imgui REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
+find_package(opengl REQUIRED)
 
 add_executable(main src/main.cpp)
-target_link_libraries(main PRIVATE imgui::imgui)
+target_link_libraries(main PRIVATE imgui::imgui glfw opengl32)
